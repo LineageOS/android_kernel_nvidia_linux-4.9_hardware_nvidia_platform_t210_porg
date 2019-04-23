@@ -27,6 +27,19 @@
 	compatible = "nvidia,jetson-nano", "nvidia,tegra210";
 	nvidia,dtsfilename = __FILE__;
 
+	firmware {
+		android {
+			fstab {
+				system {
+					dev = "/dev/block/platform/sdhci-tegra.3/by-name/APP";
+				};
+				vendor {
+					dev = "/dev/block/platform/sdhci-tegra.3/by-name/vendor";
+				};
+			};
+		};
+	};
+
 	sdhci@700b0600 { /* SDMMC4 for EMMC */
 		status = "okay";
 	};
