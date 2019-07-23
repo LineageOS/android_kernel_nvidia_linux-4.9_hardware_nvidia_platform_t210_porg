@@ -319,6 +319,11 @@
 		dvdd_sata_pll-supply = <&max77620_ldo8>;
 	};
 
+	bluedroid_pm {
+		avdd-supply = <&battery_reg>;
+		dvdd-supply = <&max77620_sd3>;
+	};
+
 	pwm-fan {
 		vdd-fan-supply = <&p3449_vdd_fan>;
 	};

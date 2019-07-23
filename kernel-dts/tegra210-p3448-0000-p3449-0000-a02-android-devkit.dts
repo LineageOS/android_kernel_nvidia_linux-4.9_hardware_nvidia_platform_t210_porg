@@ -1,4 +1,5 @@
 #include "tegra210-p3448-0000-p3449-0000-a02.dts"
+#include "porg-platforms/tegra210-porg-comms.dtsi"
 
 / {
 	nvidia,dtsfilename = __FILE__;
