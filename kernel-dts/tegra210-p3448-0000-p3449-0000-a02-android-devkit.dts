@@ -1,0 +1,12 @@
+#include "tegra210-p3448-0000-p3449-0000-a02.dts"
+
+/ {
+	nvidia,dtsfilename = __FILE__;
+
+	firmware {
+		android {
+			compatible = "android,firmware";
+			hardware = "porg_sd";
+		};
+	};
+};
