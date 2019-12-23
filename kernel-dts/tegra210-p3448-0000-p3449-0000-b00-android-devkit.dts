@@ -9,4 +9,14 @@
 			hardware = "porg_sd";
 		};
 	};
+
+	host1x {
+		dc@54200000 {
+			win-mask = <0xf>;
+		};
+
+		dc@54240000 {
+			win-mask = <0xf>;
+		};
+	};
 };
