@@ -4,7 +4,7 @@
 	nvidia,dtsfilename = __FILE__;
 
 	chosen {
-		bootargs = "earlycon=uart8250,mmio32,0x70006000 root=/dev/mmcblk0p1 rootwait rootfstype=ext4 init=/init";
+		bootargs = "earlycon=uart8250,mmio32,0x70006000 root=/dev/mmcblk0p1 rootwait rootfstype=ext4 init=/init nvdec_enabled=0";
 	};
 
 	firmware {
