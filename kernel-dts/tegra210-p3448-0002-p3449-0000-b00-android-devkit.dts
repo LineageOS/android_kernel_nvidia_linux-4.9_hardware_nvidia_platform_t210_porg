@@ -3,10 +3,26 @@
 / {
 	nvidia,dtsfilename = __FILE__;
 
+	chosen {
+		bootargs = "earlycon=uart8250,mmio32,0x70006000 root=/dev/mmcblk0p1 rootwait rootfstype=ext4 init=/init";
+	};
+
 	firmware {
 		android {
 			compatible = "android,firmware";
 			hardware = "porg";
+			first_stage_delay = "1";
+			system_root_blkdev = "/dev/mmcblk0p1";
+			fstab {
+				compatible = "android,fstab";
+				vendor {
+					compatible = "android,vendor";
+					dev = "/dev/block/platform/sdhci-tegra.3/by-name/vendor";
+					type = "ext4";
+					mnt_flags = "ro,noatime";
+					fsmgr_flags = "wait";
+				};
+			};
 		};
 	};
 
